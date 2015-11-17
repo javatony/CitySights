@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
 
   get 'locations/index'
+  post 'locations/city' =>'locations#city'
+  get 'locations/city' => 'locations#city'
 
   get 'welcome/index'
 

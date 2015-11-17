@@ -1,0 +1,39 @@
+<h1>CITY SHOW PAGE </h1>
+
+<div id="map"></div>
+
+<br>
+<br>
+
+<% @locations.each do |location| %>
+
+  <div class="<%= location.id %> row">
+    <div class="detail_container col-xs-3">
+      <ul class="list-unstyled">
+        <li><label name="name">Location Name: </label>
+        <span class="city-name"><%=location.name %></span></li>
+        <li><label class="city" name="city">Location City: </label>
+        <%=location.city %></li>
+        <li><label name="latitude">Latitude: </label>
+        <span class="lat"><%=location.latitude %></span></li>
+        <li><label name="longitude">Longitude: </label>
+        <span class="long"><%=location.longitude %></span></li>
+        <li><label name="distance">Distance: </label>
+        <span class="distance">Not Available</span></li>
+      </ul>
+    </div>
+    <div class="description col-xs-9"><%=location.description%></div>
+  </div>
+
+  <br>
+  <br>
+<% end %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdD7g6OiC-zsg81XbilHFJyrC2xLB2i3g&callback=initMap"
+
+    async defer></script>
+<script type="text/javascript">
+
+  get_location();
+
+</script>

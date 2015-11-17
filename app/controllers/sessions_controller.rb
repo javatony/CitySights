@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/'
+      redirect_to '/locations/index'
     else
       redirect_to '/'
     end
