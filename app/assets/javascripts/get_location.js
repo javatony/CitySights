@@ -4,8 +4,10 @@ var longitude = 0;
 function get_location(){
   navigator.geolocation.watchPosition(function(position){
 
-       latitude = position.coords.latitude;
-       longitude = position.coords.longitude;
+       latitude = 37.783822,
+       // position.coords.latitude;
+       longitude = -122.398645
+       // position.coords.longitude;
 
 
       console.log(latitude, longitude);
@@ -50,41 +52,41 @@ function switcher(distance, id){
 
   if(distance < 100){
     $('.'+id+' span.distance').text("HERE!");
-    $('.'+id).addClass("bg-success");
-    $('.'+id).removeClass("bg-warning");
-    $('.'+id).removeClass("bg-danger");
+    $('.'+id).addClass("alert-success");
+    $('.'+id).removeClass("alert-warning");
+    $('.'+id).removeClass("alert-danger");
     $('.'+id+' .description').css("display", "inline");
   }
   else if(distance < 805){
     $('.'+id+' span.distance').text("< .5 miles");
-    $('.'+id).addClass("bg-success");
-    $('.'+id).removeClass("bg-warning");
-    $('.'+id).removeClass("bg-danger");
+    $('.'+id).addClass("alert-success");
+    $('.'+id).removeClass("alert-warning");
+    $('.'+id).removeClass("alert-danger");
     $('.'+id+' .description').css("display", "inline");
   }
   else if(distance <= 1600){
     $('.'+id+' span.distance').text("< 1 mile");
-    $('.'+id).addClass("bg-warning");
-    $('.'+id).removeClass("bg-success");
-    $('.'+id).removeClass("bg-dnager");
+    $('.'+id).addClass("alert-warning");
+    $('.'+id).removeClass("alert-success");
+    $('.'+id).removeClass("alert-danger");
   }
   else if(distance < 2500){
     $('.'+id+' span.distance').text("< 1.5 miles");
-    $('.'+id).addClass("bg-danger");
-    $('.'+id).removeClass("bg-warning");
-    $('.'+id).removeClass("bg-success");
+    $('.'+id).addClass("alert-danger");
+    $('.'+id).removeClass("alert-warning");
+    $('.'+id).removeClass("alert-success");
   }
   else if(distance < 3218){
     $('.'+id+' span.distance').text(" < 2 miles");
-    $('.'+id).removeClass("bg-warning");
-    $('.'+id).removeClass("bg-danager");
-    $('.'+id).removeClass("bg-success");
+    $('.'+id).removeClass("alert-warning");
+    $('.'+id).removeClass("alert-danger");
+    $('.'+id).removeClass("alert-success");
   }
   else{
     $('.'+id+' span.distance').text(" > 2 miles");
-    $('.'+id).removeClass("bg-warning");
-    $('.'+id).removeClass("bg-danager");
-    $('.'+id).removeClass("bg-success");
+    $('.'+id).removeClass("alert-warning");
+    $('.'+id).removeClass("alert-danger");
+    $('.'+id).removeClass("alert-success");
   }
 
 };

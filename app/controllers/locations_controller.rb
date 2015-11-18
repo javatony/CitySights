@@ -14,6 +14,7 @@ class LocationsController < ApplicationController
 
   def city
     @locations = Location.where(city: params[:city])
+    @city = params[:city]
 
     render "city"
   end

@@ -1,11 +1,15 @@
-<h2>Choose the City You Want to Tour!</h2>
+<div class="city-show">
+  <h2>Choose the City You Want to Tour!</h2>
 
-<%=form_tag('/locations/city', :method=>'post') do %>
-  <select class="form-control" name="city" >
-    <% @locations.each do |location| %>
-      <option value="<%=location.city%>"><%= location.city %></option>
+  <div class="form-container">
+    <%=form_tag('/locations/city', :method=>'post') do %>
+      <select class="form-control" name="city" >
+        <% @locations.each do |location| %>
+          <option value="<%=location.city%>"><%= location.city %></option>
+        <% end %>
+
+        <input class="btn-primary pull-right" type="submit" value="Submit">
+      </select>
     <% end %>
-
-    <input class="btn btn-primary pull-right" type="submit" value="Submit">
-  </select>
-<% end %>
+  </div>
+</div>

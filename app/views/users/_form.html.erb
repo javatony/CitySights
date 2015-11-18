@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <strong><%= f.label :first_name %></strong><br>
+    <%= f.text_field :first_name, placeholder: "First Name", class:"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <strong><%= f.label :last_name %></strong><br>
+    <%= f.text_field :last_name, placeholder: "Last Name", class:"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <strong><%= f.label :email %></strong><br>
+    <%= f.text_field :email, placeholder: "Email", class:"form-control" %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <strong><%= f.label :password %></strong><br>
+    <%= f.password_field :password, placeholder: "Password", class:"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Register', class:"btn btn-block" %>
   </div>
 <% end %>
