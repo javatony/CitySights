@@ -18,3 +18,34 @@
   height: 20em;
   margin-top: 2em;
 }
+.description{
+  display: none;
+
+}
+.form-container{
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+.nav {
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.city-show{
+  padding-top: 8%;
+  text-align: center;
+}
+.login-form{
+  text-align: left;
+  padding-top: 15%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.welcome{
+  padding-top: 2%;
+}
+.jumbotron{
+
+}
