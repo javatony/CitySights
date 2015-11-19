@@ -4,10 +4,8 @@ var longitude = 0;
 function get_location(){
   navigator.geolocation.watchPosition(function(position){
 
-       latitude = 37.783822,
-       // position.coords.latitude;
-       longitude = -122.398645
-       // position.coords.longitude;
+       latitude = position.coords.latitude;
+       longitude = position.coords.longitude;
 
 
       console.log(latitude, longitude);
